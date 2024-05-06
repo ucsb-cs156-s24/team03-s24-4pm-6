@@ -2,10 +2,10 @@ import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import UCSBDiningCommonsMenuItemForm from "main/components/UCSBDiningCommonsMenuItem/UCSBDiningCommonsMenuItemForm";
-import {  UCSBDiningCommonsMenuItemFixtures } from "fixtures/UCSBDiningCommonsMenuItemFixtures";
+import {  ucsbDiningCommonsMenuItemFixtures } from "fixtures/ucsbDiningCommonsMenuItemFixtures";
 
 import { QueryClient, QueryClientProvider } from "react-query";
-import { ucsbDiningCommonsMenuItemFixtures } from "../../../fixtures/ucsbDiningCommonsMenuItemFixtures";
+//import { ucsbDiningCommonsMenuItemFixtures } from "../../../fixtures/ucsbDiningCommonsMenuItemFixtures";
 
 const mockedNavigate = jest.fn();
 
