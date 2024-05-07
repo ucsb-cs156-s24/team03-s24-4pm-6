@@ -45,11 +45,11 @@ export default function ArticlesTable({ articles, currentUser }) {
             accessor: 'explanation',
         },
         {
-            Header: 'E-mail',
+            Header: 'E-Mail',
             accessor: 'email',
         },        
         {
-            Header: 'Date Added',
+            Header: 'Date Added (iso format)',
             accessor: 'dateAdded',
         }
     ];
