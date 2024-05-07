@@ -17,7 +17,7 @@ jest.mock('react-router-dom', () => ({
 describe("UCSBDiningCommonsMenuItemForm tests", () => {
     const queryClient = new QueryClient();
 
-    const expectedHeaders = ["Name", "diningCommonsCode","station"];
+    const expectedHeaders = ["Name", "DiningCommonsCode","Station"];
     const testId = "UCSBDiningCommonsMenuItemForm";
 
     test("renders correctly with no initialContents", async () => {
@@ -98,6 +98,36 @@ describe("UCSBDiningCommonsMenuItemForm tests", () => {
         await waitFor(() => {
             expect(screen.getByText(/Max length 30 characters/)).toBeInTheDocument();
         });
+    });
+
+    test("No Error messsages on good input", async () => {
+
+        const mockSubmitAction = jest.fn();
+
+
+        render(
+            <Router  >
+                <UCSBDiningCommonsMenuItemForm submitAction={mockSubmitAction} />
+            </Router>
+        );
+        await screen.findByTestId("UCSBDiningCommonsMenuItemForm-name");
+
+        const nameField = screen.getByTestId("UCSBDiningCommonsMenuItemForm-name");
+        const dcField = screen.getByTestId("UCSBDiningCommonsMenuItemForm-diningCommonsCode");
+        const stationField = screen.getByTestId("UCSBDiningCommonsMenuItemForm-station");
+        const submitButton = screen.getByTestId("UCSBDiningCommonsMenuItemForm-submit");
+
+        fireEvent.change(nameField, { target: { value: 'burger' } });
+        fireEvent.change(dcField, { target: { value: 'dlg' } });
+        fireEvent.change(stationField, { target: { value: 'grill' } });
+        fireEvent.click(submitButton);
+
+        await waitFor(() => expect(mockSubmitAction).toHaveBeenCalled());
+
+        expect(screen.queryByText(/name is required./)).not.toBeInTheDocument();
+        expect(screen.queryByText(/diningCommonsCode is required./)).not.toBeInTheDocument();
+        expect(screen.queryByText(/station is required./)).not.toBeInTheDocument();
+
     });
 
 });
