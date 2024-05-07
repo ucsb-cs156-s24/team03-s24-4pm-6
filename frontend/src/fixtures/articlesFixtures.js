@@ -11,7 +11,7 @@ const articlesFixtures = {
       }
     ],
 
-    threeArticless:
+    threeArticles:
     [
         {
        		"id": 2,
