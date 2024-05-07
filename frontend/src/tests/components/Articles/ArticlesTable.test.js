@@ -16,8 +16,8 @@ jest.mock('react-router-dom', () => ({
 describe("ArticlesTable tests", () => {
   const queryClient = new QueryClient();
 
-  const expectedHeaders = ["id", "Name", "Description"];
-  const expectedFields = ["id", "name", "description"];
+  const expectedHeaders = ["id", "Title", "URL", "Explanation", "E-Mail", "Date Added (iso format)"];
+  const expectedFields = ["id", "title", "url", "explanation", "email", "dateAdded"];
   const testId = "ArticlesTable";
 
   test("renders empty table correctly", () => {
@@ -164,7 +164,7 @@ describe("ArticlesTable tests", () => {
 
     // assert - check that the expected content is rendered
     expect(await screen.findByTestId(`${testId}-cell-row-0-col-id`)).toHaveTextContent("2");
-    expect(screen.getByTestId(`${testId}-cell-row-0-col-name`)).toHaveTextContent("Article 2");
+    expect(screen.getByTestId(`${testId}-cell-row-0-col-title`)).toHaveTextContent("Article 2");
 
     const deleteButton = screen.getByTestId(`${testId}-cell-row-0-col-Delete-button`);
     expect(deleteButton).toBeInTheDocument();
