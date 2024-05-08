@@ -22,54 +22,81 @@ function UCSBOrganizationForm({ initialContents, submitAction, buttonLabel = "Cr
     return (
         <Form onSubmit={handleSubmit(submitAction)}>
 
-            {initialContents && (
+            {/* {initialContents && (
                 <Form.Group className="mb-3" >
-                    <Form.Label htmlFor="orgCode">orgCode</Form.Label>
+                    <Form.Label htmlFor="id">Id</Form.Label>
                     <Form.Control
-                        data-testOrgCode={testOrgCodePrefix + "-orgCode"}
-                        orgCode="orgCode"
+                        data-testid={testIdPrefix + "-id"}
+                        id="id"
                         type="text"
-                        {...register("orgCode")}
+                        {...register("id")}
                         value={initialContents.id}
                         disabled
                     />
                 </Form.Group>
-            )}
+            )} */}
+
 
             <Form.Group className="mb-3" >
-                <Form.Label htmlFor="orgTranslationShort">orgTranslationShort</Form.Label>
+                <Form.Label htmlFor="orgCode">Organization Code</Form.Label>
                 <Form.Control
-                    data-testid={testIdPrefix + "-name"}
-                    id="name"
+                    data-testid={testIdPrefix + "-orgCode"}
+                    id="orgCode"
                     type="text"
-                    isInvalid={Boolean(errors.name)}
-                    {...register("name", {
-                        required: "Name is required.",
-                        maxLength : {
-                            value: 30,
-                            message: "Max length 30 characters"
-                        }
+                    isInvalid={Boolean(errors.orgCode)}
+                    {...register("orgCode", {
+                        required: "Organization Code is required."
                     })}
                 />
                 <Form.Control.Feedback type="invalid">
-                    {errors.name?.message}
+                    {errors.orgCode?.message}
                 </Form.Control.Feedback>
             </Form.Group>
 
             <Form.Group className="mb-3" >
-                <Form.Label htmlFor="description">Description</Form.Label>
+                <Form.Label htmlFor="orgTranslationShort">Organization Translation Short</Form.Label>
                 <Form.Control
-                    data-testid={testIdPrefix + "-description"}
-                    id="description"
+                    data-testid={testIdPrefix + "-orgTranslationShort"}
+                    id="orgTranslationShort"
                     type="text"
-                    isInvalid={Boolean(errors.description)}
-                    {...register("description", {
-                        required: "Description is required."
+                    isInvalid={Boolean(errors.orgTranslationShort)}
+                    {...register("orgTranslationShort", {
+                        required: "Organization Translation Short is required."
                     })}
                 />
                 <Form.Control.Feedback type="invalid">
-                    {errors.description?.message}
+                    {errors.orgTranslationShort?.message}
                 </Form.Control.Feedback>
+            </Form.Group>
+
+
+
+            <Form.Group className="mb-3" >
+                <Form.Label htmlFor="orgTranslation">Organization Translation</Form.Label>
+                <Form.Control
+                    data-testid={testIdPrefix + "-orgTranslation"}
+                    id="orgTranslation"
+                    type="text"
+                    isInvalid={Boolean(errors.orgTranslation)}
+                    {...register("orgTranslation", {
+                        required: "Organization Translation is required."
+                    })}
+                />
+                <Form.Control.Feedback type="invalid">
+                    {errors.orgTranslation?.message}
+                </Form.Control.Feedback>
+            </Form.Group>
+
+
+            <Form.Group className="mb-3">
+                <Form.Label htmlFor="inactive">Inactive</Form.Label>
+                <Form.Control
+                    data-testid={testIdPrefix + "-inactive"}
+                    id="inactive"
+                    type="checkbox"
+                    {...register("inactive")} // Removed isInvalid and validation rules
+                />
+                {/* Removed the Form.Control.Feedback since there are no errors to display */}
             </Form.Group>
 
 
@@ -92,4 +119,4 @@ function UCSBOrganizationForm({ initialContents, submitAction, buttonLabel = "Cr
     )
 }
 
-export default UCSBOrganizationFormForm;
+export default UCSBOrganizationForm;
