@@ -29,7 +29,7 @@ export default function ArticlesEditPage({storybook=false}) {
       id: articles.id,
     },
     data: {
-     tite: articles.title,
+     title: articles.title,
      url: articles.url,
      explanation: articles.explanation,
      email: articles.email,

@@ -58,7 +58,10 @@ describe("ArticlesCreatePage tests", () => {
         const articles = {
             id: 3,
             title: "Article 3",
-            url: "127.0.0.1/article3.html"
+            url: "127.0.0.1/article3.html",
+            explanation: "This is Article 3",  
+       	    email: "anon@127.0.0.1",  
+       	    dateAdded: "1970-01-01T00:00"  
         };
 
         axiosMock.onPost("/api/articles/post").reply(202, articles);
@@ -86,9 +89,9 @@ describe("ArticlesCreatePage tests", () => {
         
         const emailInput = screen.getByLabelText("E-Mail");
         expect(emailInput).toBeInTheDocument();
-
+        
         const dateAddedInput = screen.getByLabelText("Date Added (iso format)");
-        expect(dateAddedInput).toBeInTheDocument();                
+        expect(dateAddedInput).toBeInTheDocument();
 
         const createButton = screen.getByText("Create");
         expect(createButton).toBeInTheDocument();
@@ -96,8 +99,8 @@ describe("ArticlesCreatePage tests", () => {
         fireEvent.change(titleInput, { target: { value: 'Article 3' } })
         fireEvent.change(urlInput, { target: { value: '127.0.0.1/article3.html' } })
         fireEvent.change(explanationInput, { target: { value: 'This is Article 3' } })
-        fireEvent.change(emailInput, { target: { value: 'sockpuppet@127.0.0.1' } })
-         fireEvent.change(dateAddedInput, { target: { value: '1970-01-01T00:00' } })
+        fireEvent.change(emailInput, { target: { value: 'anon@127.0.0.1' } })
+        fireEvent.change(dateAddedInput, { target: { value: '1970-01-01T00:00' } })
         fireEvent.click(createButton);
 
         await waitFor(() => expect(axiosMock.history.post.length).toBe(1));
@@ -105,9 +108,10 @@ describe("ArticlesCreatePage tests", () => {
         expect(axiosMock.history.post[0].params).toEqual({
             title: "Article 3",
             url: "127.0.0.1/article3.html",
-            explanation: "This is Article 3",  
-            email: "sockpuppet@127.0.0.1",  
-       	    dateAdded: "1970-01-01T00:00"  
+            explanation: "This is Article 3",
+            email: "anon@127.0.0.1",
+            dateAdded: "1970-01-01T00:00"
+            
         });
 
         // assert - check that the toast was called with the expected message
