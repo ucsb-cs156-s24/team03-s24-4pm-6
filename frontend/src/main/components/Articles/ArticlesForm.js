@@ -63,7 +63,7 @@ function ArticlesForm({ initialContents, submitAction, buttonLabel = "Create" })
             <Form.Group className="mb-3" >
                 <Form.Label htmlFor="url">URL</Form.Label>
                 <Form.Control
-                    data-testid={testIdPrefix + "-description"}
+                    data-testid={testIdPrefix + "-url"}
                     id="url"
                     type="text"
                     isInvalid={Boolean(errors.url)}
