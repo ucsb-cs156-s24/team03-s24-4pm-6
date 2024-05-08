@@ -1,6 +1,6 @@
 import React from 'react';
 import ArticlesTable from "main/components/Articles/ArticlesTable";
-import { articlesFixtures } from 'fixtures/articlesDatesFixtures';
+import { articlesFixtures } from 'fixtures/articlesFixtures';
 import { currentUserFixtures } from 'fixtures/currentUserFixtures';
 import { rest } from "msw";
 
@@ -18,19 +18,19 @@ const Template = (args) => {
 export const Empty = Template.bind({});
 
 Empty.args = {
-    dates: []
+    articles: []
 };
 
 export const ThreeItemsOrdinaryUser = Template.bind({});
 
 ThreeItemsOrdinaryUser.args = {
-    dates: articlesFixtures.threeDates,
+    articles: articlesFixtures.threeArticles,
     currentUser: currentUserFixtures.userOnly,
 };
 
 export const ThreeItemsAdminUser = Template.bind({});
 ThreeItemsAdminUser.args = {
-    dates: articlesFixtures.threeDates,
+    articles: articlesFixtures.threeArticles,
     currentUser: currentUserFixtures.adminUser,
 }
 
