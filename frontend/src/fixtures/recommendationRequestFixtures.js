@@ -40,4 +40,4 @@ const recommendationRequestFixtures = {
 };
 
 
-export { recommendationReqeustFixtures };
+export { recommendationRequestFixtures };
