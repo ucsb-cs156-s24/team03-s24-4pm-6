@@ -7,7 +7,7 @@ const articlesFixtures = {
         "url": "127.0.0.1/article1.html", 
         "explanation": "This is Article 1",  
         "email": "nomguerre@127.0.0.1",  
-        "dateAdded": "1970-01-01T00:00:00"      
+        "dateAdded": "1970-01-01T00:00"      
       }
     ],
 
@@ -19,7 +19,7 @@ const articlesFixtures = {
         	"url": "127.0.0.1/article2.html", 
         	"explanation": "This is Article 2",  
         	"email": "anon@127.0.0.1",  
-        	"dateAdded": "1970-01-01T00:00:00"      
+        	"dateAdded": "1970-01-01T00:00"      
         },
 
         {
@@ -28,7 +28,7 @@ const articlesFixtures = {
         	"url": "127.0.0.1/article3.html", 
         	"explanation": "This is Article 3",  
         	"email": "sockpuppet@127.0.0.1",  
-        	"dateAdded": "1970-01-01T00:00:00"  
+        	"dateAdded": "1970-01-01T00:00"  
         },
 
         {
@@ -37,7 +37,7 @@ const articlesFixtures = {
         	"url": "127.0.0.1/article4.html", 
         	"explanation": "This is Article 4",  
         	"email": "admin@127.0.0.1",  
-        	"dateAdded": "1970-01-01T00:00:00"       
+        	"dateAdded": "1970-01-01T00:00"       
         },
         
     ]
