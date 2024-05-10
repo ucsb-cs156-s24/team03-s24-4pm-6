@@ -2,7 +2,8 @@ const helpRequestFixtures = {
     oneHelpRequest:
     [
       {
-       "requesterEmail": "ibareket@ucsb.edu",
+        "id": 1,
+        "requesterEmail": "ibareket@ucsb.edu",
         "teamId": "6",
         "tableOrBreakoutRoom": "breakout room",    
         "requestTime": "2022-01-02T12:00:00",
@@ -15,6 +16,7 @@ const helpRequestFixtures = {
     threeHelpRequests:
     [
         {
+            "id": 2,
             "requesterEmail": "cgaucho@ucsb.edu",
             "teamId": "4",
             "tableOrBreakoutRoom": "table",    
@@ -25,6 +27,7 @@ const helpRequestFixtures = {
         },
 
         {
+            "id": 3,
             "requesterEmail": "12345@ucsb.edu",
             "teamId": "5",
             "tableOrBreakoutRoom": "breakout",    
@@ -35,6 +38,7 @@ const helpRequestFixtures = {
         },
 
         {
+            "id": 4,
             "requesterEmail": "computer@ucsb.edu",
             "teamId": "1",
             "tableOrBreakoutRoom": "table",    
