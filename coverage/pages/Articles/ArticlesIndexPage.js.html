@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for pages/UCSBDates/UCSBDatesIndexPage.js</title>
+    <title>Code coverage report for pages/Articles/ArticlesIndexPage.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">pages/UCSBDates</a> UCSBDatesIndexPage.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">pages/Articles</a> ArticlesIndexPage.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -106,7 +106,9 @@
 <a name='L41'></a><a href='#L41'>41</a>
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a>
-<a name='L44'></a><a href='#L44'>44</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -116,12 +118,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">14x</span>
-<span class="cline-any cline-yes">14x</span>
-<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -129,18 +129,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -153,46 +157,48 @@
 import { useBackend } from 'main/utils/useBackend';
 &nbsp;
 import BasicLayout from "main/layouts/BasicLayout/BasicLayout";
-import UCSBDatesTable from 'main/components/UCSBDates/UCSBDatesTable';
+import ArticlesTable from 'main/components/Articles/ArticlesTable';
+import { useCurrentUser , hasRole} from 'main/utils/currentUser'
 import { Button } from 'react-bootstrap';
-import { useCurrentUser , hasRole} from 'main/utils/currentUser';
 &nbsp;
-export default function UCSBDatesIndexPage() {
+export default function ArticlesIndexPage() {
 &nbsp;
-  const currentUser = useCurrentUser();
+    const currentUser = useCurrentUser();
 &nbsp;
-  const createButton = () =&gt; {
-    if (hasRole(currentUser, "ROLE_ADMIN")) {
-        return (
-            &lt;Button
-                variant="primary"
-                href="/ucsbdates/create"
-                style={{ float: "right" }}
-            &gt;
-                Create UCSBDate 
-            &lt;/Button&gt;
-        )
-    } 
-  }
-  
-  const { data: dates, error: _error, status: _status } =
-    useBackend(
-      // Stryker disable next-line all : don't test internal caching of React Query
-      ["/api/ucsbdates/all"],
-      { method: "GET", url: "/api/ucsbdates/all" },
-      []
+    const { data: articles, error: _error, status: _status } =
+        useBackend(
+            // Stryker disable next-line all : don't test internal caching of React Query
+            ["/api/articles/all"],
+            { method: "GET", url: "/api/articles/all" },
+            // Stryker disable next-line all : don't test default value of empty list
+            []
+        );
+&nbsp;
+    const createButton = () =&gt; {
+        if (hasRole(currentUser, "ROLE_ADMIN")) {
+            return (
+                &lt;Button
+                    variant="primary"
+                    href="/articles/create"
+                    style={{ float: "right" }}
+                &gt;
+                    Create Articles
+                &lt;/Button&gt;
+            )
+        } 
+    }
+&nbsp;
+    return (
+        &lt;BasicLayout&gt;
+            &lt;div className="pt-2"&gt;
+                {createButton()}
+                &lt;h1&gt;Articles&lt;/h1&gt;
+                &lt;ArticlesTable articles={articles} currentUser={currentUser} /&gt;
+            &lt;/div&gt;
+        &lt;/BasicLayout&gt;
     );
-&nbsp;
-  return (
-    &lt;BasicLayout&gt;
-      &lt;div className="pt-2"&gt;
-        {createButton()}
-        &lt;h1&gt;UCSBDates&lt;/h1&gt;
-        &lt;UCSBDatesTable dates={dates} currentUser={currentUser} /&gt;
-      &lt;/div&gt;
-    &lt;/BasicLayout&gt;
-  )
-}</pre></td></tr></table></pre>
+}
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
