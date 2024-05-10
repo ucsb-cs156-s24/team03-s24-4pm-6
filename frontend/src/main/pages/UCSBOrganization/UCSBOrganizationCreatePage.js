@@ -6,7 +6,9 @@ export default function UCSBOrganizationCreatePage() {
   return (
     <BasicLayout>
       <div className="pt-2">
-        <h1>Organization page not yet implemented</h1>
+        <h1>Index page not yet implemented</h1>
+        <p><a href="/placeholder/create">Create</a></p>
+        <p><a href="/placeholder/edit/1">Edit</a></p>
       </div>
     </BasicLayout>
   )
