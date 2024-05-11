@@ -2,7 +2,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom';
 
-function RestaurantForm({ initialContents, submitAction, buttonLabel = "Create" }) {
+function UCSBDiningCommonsMenuItemForm({ initialContents, submitAction, buttonLabel = "Create" }) {
 
     
     // Stryker disable all
@@ -17,11 +17,11 @@ function RestaurantForm({ initialContents, submitAction, buttonLabel = "Create" 
    
     const navigate = useNavigate();
 
-    const testIdPrefix = "RestaurantForm";
+    const testIdPrefix = "UCSBDiningCommonsMenuItemForm";
 
     return (
         <Form onSubmit={handleSubmit(submitAction)}>
-            
+
             {initialContents && (
                 <Form.Group className="mb-3" >
                     <Form.Label htmlFor="id">Id</Form.Label>
@@ -57,18 +57,34 @@ function RestaurantForm({ initialContents, submitAction, buttonLabel = "Create" 
             </Form.Group>
 
             <Form.Group className="mb-3" >
-                <Form.Label htmlFor="description">Description</Form.Label>
+                <Form.Label htmlFor="diningCommonsCode">DiningCommonsCode</Form.Label>
                 <Form.Control
-                    data-testid={testIdPrefix + "-description"}
-                    id="description"
+                    data-testid={testIdPrefix + "-diningCommonsCode"}
+                    id="diningCommonsCode"
                     type="text"
-                    isInvalid={Boolean(errors.description)}
-                    {...register("description", {
-                        required: "Description is required."
+                    isInvalid={Boolean(errors.diningCommonsCode)}
+                    {...register("diningCommonsCode", {
+                        required: "diningCommonsCode is required."
                     })}
                 />
                 <Form.Control.Feedback type="invalid">
-                    {errors.description?.message}
+                    {errors.diningCommonsCode?.message}
+                </Form.Control.Feedback>
+            </Form.Group>
+
+            <Form.Group className="mb-3" >
+                <Form.Label htmlFor="station">Station</Form.Label>
+                <Form.Control
+                    data-testid={testIdPrefix + "-station"}
+                    id="station"
+                    type="text"
+                    isInvalid={Boolean(errors.station)}
+                    {...register("station", {
+                        required: "station is required."
+                    })}
+                />
+                <Form.Control.Feedback type="invalid">
+                    {errors.station?.message}
                 </Form.Control.Feedback>
             </Form.Group>
 
@@ -92,4 +108,4 @@ function RestaurantForm({ initialContents, submitAction, buttonLabel = "Create" 
     )
 }
 
-export default RestaurantForm;
+export default UCSBDiningCommonsMenuItemForm;
