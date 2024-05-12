@@ -1,10 +1,11 @@
 const menuItemReviewFixtures = {
     oneReview: {
         "id": 1,
-        "menuItemId": 1,
+        "itemId": 1,
         "reviewerEmail": "cgaucho@ucsb.edu",
         "stars": 5,
-        "comment": "Good"
+        "dateReviewed": "2022-01-02T12:00:00",
+        "comments": "Good"
     },
     threeReviews: [
         {
