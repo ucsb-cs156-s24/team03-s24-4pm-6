@@ -81,7 +81,7 @@ describe("RecommendationRequestEditPage tests", () => {
                 explanation:"Whassup witit",
                 dateRequested:"2023-01-02T12:00",
                 dateNeeded:"2023-01-05T12:00",
-                done:"false"
+                done:false
             });
             axiosMock.onPut('/api/recommendationrequests').reply(200, {
                 id: "17",
@@ -90,7 +90,7 @@ describe("RecommendationRequestEditPage tests", () => {
                 explanation:"Whassups witit",
                 dateRequested:"2022-01-02T12:00",
                 dateNeeded:"2022-01-05T12:00",
-                done:"true"
+                done:true
             });
         });
 
@@ -132,7 +132,7 @@ describe("RecommendationRequestEditPage tests", () => {
             expect(explanationField).toHaveValue("Whassup witit");
             expect(dateRequestedField).toHaveValue("2023-01-02T12:00");
             expect(dateNeededField).toHaveValue("2023-01-05T12:00");
-            expect(doneField).toBeChecked(false);
+            expect(doneField).not.toBeChecked();
             expect(submitButton).toBeInTheDocument();
         });
 
@@ -163,7 +163,7 @@ describe("RecommendationRequestEditPage tests", () => {
             expect(explanationField).toHaveValue("Whassup witit");
             expect(dateRequestedField).toHaveValue("2023-01-02T12:00");
             expect(dateNeededField).toHaveValue("2023-01-05T12:00");
-            expect(doneField).toBeChecked(false);
+            expect(doneField).not.toBeChecked();
             expect(submitButton).toBeInTheDocument();
 
         
@@ -173,7 +173,7 @@ describe("RecommendationRequestEditPage tests", () => {
             fireEvent.change(explanationField, { target: { value: 'Whassups witit' } });
             fireEvent.change(dateRequestedField, { target: { value: '2022-01-02T12:00' } });
             fireEvent.change(dateNeededField, { target: { value: '2022-01-05T12:00' } });
-            fireEvent.change(doneField, { target: { value: "true" } });
+            fireEvent.change(doneField, { target: { checked: false } });
             fireEvent.click(submitButton);
 
             await waitFor(() => expect(mockToast).toBeCalled());
@@ -188,7 +188,7 @@ describe("RecommendationRequestEditPage tests", () => {
                 explanation:"Whassups witit",
                 dateRequested:"2022-01-02T12:00",
                 dateNeeded:"2022-01-05T12:00",
-                done:"true"
+                done:false
             })); // posted object
 
         });
