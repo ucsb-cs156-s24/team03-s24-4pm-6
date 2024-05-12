@@ -44,7 +44,6 @@ export default function UCSBOrganizationCreatePage({storybook=false}) {
         <h1>Create New UCSBOrganization</h1>
 
         <UCSBOrganizationForm submitAction={onSubmit} />
-
       </div>
     </BasicLayout>
   )
