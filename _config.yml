@@ -23,4 +23,4 @@ repo_name: "TBD"
 repo: ucsb-cs156-s24/team03-s24-4pm-6
 owner: ucsb-cs156-s24
 repo_name: team03-s24-4pm-6
-pull_requests: [{"author":{"id":"MDQ6VXNlcjI0NzgzNDE3","is_bot":false,"login":"dakotazoid56","name":"Dakota"},"headRefName":"Dakota-RecRequest-FinalPages","number":225,"title":"(NOT READY) Dakota rec request final pages (Create, Index, Edit)","url":"https://github.com/ucsb-cs156-s24/team03-s24-4pm-6/pull/225"},{"author":{"id":"U_kgDOBXuvjg","is_bot":false,"login":"emanbareket","name":""},"headRefName":"Immanuel-Help","number":215,"title":"fixtures","url":"https://github.com/ucsb-cs156-s24/team03-s24-4pm-6/pull/215"}]
+pull_requests: [{"author":{"id":"U_kgDOBXuvjg","is_bot":false,"login":"emanbareket","name":""},"headRefName":"Immanuel-Help","number":215,"title":"fixtures","url":"https://github.com/ucsb-cs156-s24/team03-s24-4pm-6/pull/215"}]
