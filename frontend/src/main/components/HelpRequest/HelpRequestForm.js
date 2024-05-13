@@ -65,7 +65,7 @@ function HelpRequestForm({ initialContents, submitAction, buttonLabel = "Create"
                 </Col>
                 <Col>
                     <Form.Group className="mb-3" >
-                        <Form.Label htmlFor="teamId">Team Id</Form.Label>
+                        <Form.Label htmlFor="teamId">Team ID</Form.Label>
                         <Form.Control
                             data-testid="HelpRequestForm-teamId"
                             id="teamId"
