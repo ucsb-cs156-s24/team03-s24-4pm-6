@@ -67,8 +67,8 @@ describe("UserTable tests", () => {
 
     );
 
-    const expectedHeaders = ["id", "RequesterEmail", "TeamId", "Date", "Explanation", "Solved"];
-    const expectedFields = ["id", "requesterEmail", "teamId", "requestTime", "explanation", "solved"];
+    const expectedHeaders = ["id", "RequesterEmail", "TeamId", "TableOrBreakoutRoom", "Date", "Explanation", "Solved"]; //added TableOrBreakoutRoom to headers
+    const expectedFields = ["id", "requesterEmail", "teamId", "tableOrBreakoutRoom", "requestTime", "explanation", "solved"]; //added tableOrBreakoutRoom to fields
     const testId = "HelpRequestTable";
 
     expectedHeaders.forEach((headerText) => {
