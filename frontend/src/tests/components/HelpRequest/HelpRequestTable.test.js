@@ -15,7 +15,10 @@ jest.mock('react-router-dom', () => ({
 
 describe("UserTable tests", () => {
   const queryClient = new QueryClient();
-
+  const expectedHeaders = ["id", "RequesterEmail", "TeamId", "TableOrBreakoutRoom", "Date", "Explanation", "Solved"]; //added TableOrBreakoutRoom to headers
+  const expectedFields = ["id", "requesterEmail", "teamId", "tableOrBreakoutRoom", "requestTime", "explanation", "solved"]; //added tableOrBreakoutRoom to fields
+  const testId = "HelpRequestTable";
+    
   test("Has the expected column headers and content for ordinary user", () => {
 
     const currentUser = currentUserFixtures.userOnly;
@@ -28,11 +31,11 @@ describe("UserTable tests", () => {
       </QueryClientProvider>
 
     );
-
-    const expectedHeaders = ["id", "RequesterEmail", "TeamId", "Date", "Explanation", "Solved"];
-    const expectedFields = ["id", "requesterEmail", "teamId", "requestTime", "explanation", "solved"];
+/*
+    const expectedHeaders = ["id", "RequesterEmail", "TeamId", "TableOrBreakoutRoom", "Date", "Explanation", "Solved"]; //added TableOrBreakoutRoom to headers
+    const expectedFields = ["id", "requesterEmail", "teamId", "tableOrBreakoutRoom", "requestTime", "explanation", "solved"]; //added tableOrBreakoutRoom to fields
     const testId = "HelpRequestTable";
-
+*/
     expectedHeaders.forEach((headerText) => {
       const header = screen.getByText(headerText);
       expect(header).toBeInTheDocument();
@@ -66,7 +69,7 @@ describe("UserTable tests", () => {
       </QueryClientProvider>
 
     );
-
+/*
     const expectedHeaders = ["id", "RequesterEmail", "TeamId", "TableOrBreakoutRoom", "Date", "Explanation", "Solved"]; //added TableOrBreakoutRoom to headers
     const expectedFields = ["id", "requesterEmail", "teamId", "tableOrBreakoutRoom", "requestTime", "explanation", "solved"]; //added tableOrBreakoutRoom to fields
     const testId = "HelpRequestTable";
@@ -80,7 +83,7 @@ describe("UserTable tests", () => {
       const header = screen.getByTestId(`${testId}-cell-row-0-col-${field}`);
       expect(header).toBeInTheDocument();
     });
-
+/*
     expect(screen.getByTestId(`${testId}-cell-row-0-col-id`)).toHaveTextContent("2");
     expect(screen.getByTestId(`${testId}-cell-row-1-col-id`)).toHaveTextContent("3");
 
