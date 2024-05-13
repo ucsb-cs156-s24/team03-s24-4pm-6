@@ -29,7 +29,7 @@ describe("HelpRequestForm tests", () => {
 
         render(
             <Router  >
-                <UCSBDateForm initialContents={helpRequestFixtures.oneHelpRequest} />
+                <HelpRequestForm initialContents={helpRequestFixtures.oneHelpRequest} />
             </Router>
         );
         await screen.findByTestId(/HelpRequestForm-id/);
@@ -94,7 +94,7 @@ describe("HelpRequestForm tests", () => {
         const tableOrBreakoutRoomField = screen.getByTestId("HelpRequestForm-tableOrBreakoutRoom");
         const requestTimeField = screen.getByTestId("HelpRequestForm-requestTime");
         const explanationField = screen.getByTestId("HelpRequestForm-explanation");
-        const sovledField = screen.getByTestId("HelpRequestForm-solved");
+        const solvedField = screen.getByTestId("HelpRequestForm-solved");
         const submitButton = screen.getByTestId("HelpRequestForm-submit");
 
         fireEvent.change(requesterEmailField, { target: { value: 'ibareket@ucsb.edu' } });
