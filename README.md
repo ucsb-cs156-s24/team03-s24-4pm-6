@@ -7,7 +7,6 @@ Deployments:
 * Prod: <https://team03.dokku-06.cs.ucsb.edu>
 * QA: <https://team03-qa.dokku-06.cs.ucsb.edu>
 
-TODO: Fill in this table with correct information. 
 
 | Table                     | Name         | Github Id     |
 |---------------------------|--------------|---------------|
