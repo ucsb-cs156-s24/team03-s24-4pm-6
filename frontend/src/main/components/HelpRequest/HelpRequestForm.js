@@ -142,7 +142,7 @@ function HelpRequestForm({ initialContents, submitAction, buttonLabel = "Create"
                                 isInvalid={Boolean(errors.solved)}
                                 
                                 {...register("solved", { 
-                                //    required: "Solved is required."
+                                    
                                 })}
                             />
                             
