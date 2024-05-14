@@ -36,7 +36,7 @@ ThreeItemsAdminUser.args = {
 
 ThreeItemsAdminUser.parameters = {
     msw: [
-        rest.delete('/api/helprequest', (req, res, ctx) => {
+        rest.delete('/api/help', (req, res, ctx) => {
             window.alert("DELETE: " + JSON.stringify(req.url));
             return res(ctx.status(200),ctx.json({}));
         }),

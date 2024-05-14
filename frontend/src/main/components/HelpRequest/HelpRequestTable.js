@@ -11,7 +11,7 @@ export default function HelpRequestTable({ helpRequests, currentUser }) {
     const navigate = useNavigate();
 
     const editCallback = (cell) => {
-        navigate(`/helprequest/edit/${cell.row.values.id}`)
+        navigate(`/help/edit/${cell.row.values.id}`)
     }
 
     // Stryker disable all : hard to test for query caching
@@ -19,7 +19,7 @@ export default function HelpRequestTable({ helpRequests, currentUser }) {
     const deleteMutation = useBackendMutation(
         cellToAxiosParamsDelete,
         { onSuccess: onDeleteSuccess },
-        ["/api/helprequest/all"]
+        ["/api/help/all"]
     );
     // Stryker restore all 
 
