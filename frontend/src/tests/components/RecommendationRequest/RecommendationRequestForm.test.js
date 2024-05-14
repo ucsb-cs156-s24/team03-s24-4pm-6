@@ -104,7 +104,7 @@ describe("RecommendationRequestForm tests", () => {
         const explanationField = screen.getByTestId("RecommendationRequestForm-explanation");
         const dateRequestedField = screen.getByTestId("RecommendationRequestForm-dateRequested");
         const dateNeededField = screen.getByTestId("RecommendationRequestForm-dateNeeded");
-        //const doneField = screen.getByTestId("RecommendationRequestForm-done");
+        const doneField = screen.getByTestId("RecommendationRequestForm-done");
         const submitButton = screen.getByTestId("RecommendationRequestForm-submit");
 
         fireEvent.change(requestorEmailField, { target: { value: 'dakotabarnes@ucsb.edu' } });
@@ -112,7 +112,7 @@ describe("RecommendationRequestForm tests", () => {
         fireEvent.change(explanationField, { target: { value: 'Need Rec ASAP' } });
         fireEvent.change(dateRequestedField, { target: { value: '2024-01-02T12:00:00' } });
         fireEvent.change(dateNeededField, { target: { value: '2024-01-05T12:00:00' } });
-        //fireEvent.change(doneField, { target: { value: 'true' } });
+        fireEvent.change(doneField, { target: { value: 'true' } });
         fireEvent.click(submitButton);
 
         await waitFor(() => expect(mockSubmitAction).toHaveBeenCalled());
