@@ -16,7 +16,7 @@ jest.mock('react-router-dom', () => ({
 describe("UserTable tests", () => {
   const queryClient = new QueryClient();
   const expectedHeaders = ["id", "RequesterEmail", "TeamId", "TableOrBreakoutRoom", "Date", "Explanation", "Solved"]; //added TableOrBreakoutRoom to headers
-  const expectedFields = ["id", "requesterEmail", "teamId", "tableOrBreakoutRoom", "requestTime", "explanation", "solved"]; //added tableOrBreakoutRoom to fields
+  const expectedFields = ["id", "requesterEmail", "teamId", "tableOrBreakoutRoom", "requestTime", "explanation", "Solved"]; //added tableOrBreakoutRoom to fields
   const testId = "HelpRequestTable";
     
   test("Has the expected column headers and content for ordinary user", () => {
@@ -44,6 +44,9 @@ describe("UserTable tests", () => {
 
     expect(screen.getByTestId(`${testId}-cell-row-0-col-id`)).toHaveTextContent("2");
     expect(screen.getByTestId(`${testId}-cell-row-1-col-id`)).toHaveTextContent("3");
+
+    expect(screen.getByTestId(`${testId}-cell-row-0-col-Solved`)).toHaveTextContent("true");
+    expect(screen.getByTestId(`${testId}-cell-row-0-col-Solved`)).toHaveTextContent("true");
 
     const editButton = screen.queryByTestId(`${testId}-cell-row-0-col-Edit-button`);
     expect(editButton).not.toBeInTheDocument();
@@ -78,6 +81,9 @@ describe("UserTable tests", () => {
 
     expect(screen.getByTestId(`${testId}-cell-row-0-col-id`)).toHaveTextContent("2");
     expect(screen.getByTestId(`${testId}-cell-row-1-col-id`)).toHaveTextContent("3");
+
+    expect(screen.getByTestId(`${testId}-cell-row-0-col-Solved`)).toHaveTextContent("true");
+    expect(screen.getByTestId(`${testId}-cell-row-1-col-Solved`)).toHaveTextContent("false");
 
     const editButton = screen.getByTestId(`${testId}-cell-row-0-col-Edit-button`);
     expect(editButton).toBeInTheDocument();

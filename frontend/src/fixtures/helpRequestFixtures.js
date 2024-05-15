@@ -8,7 +8,7 @@ const helpRequestFixtures = {
         "tableOrBreakoutRoom": "breakout room",    
         "requestTime": "2022-01-02T12:00:00",
         "explanation": "need help",
-        "solved": "true"
+        "solved": true
 
       }
     ],
@@ -22,7 +22,7 @@ const helpRequestFixtures = {
             "tableOrBreakoutRoom": "table",    
             "requestTime": "2022-03-02T12:00:00",
             "explanation": "help please",
-            "solved": "true"
+            "solved": true
         
         },
 
@@ -33,7 +33,7 @@ const helpRequestFixtures = {
             "tableOrBreakoutRoom": "breakout",    
             "requestTime": "2024-01-02T12:02:00",
             "explanation": "struggling",
-            "solved": "false"
+            "solved": false
 
         },
 
@@ -44,7 +44,7 @@ const helpRequestFixtures = {
             "tableOrBreakoutRoom": "table",    
             "requestTime": "2024-05-08T12:00:00",
             "explanation": "need assistance",
-            "solved": "true"
+            "solved": true
 
         },
         
