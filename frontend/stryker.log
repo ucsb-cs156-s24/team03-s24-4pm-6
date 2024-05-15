@@ -1,0 +1,1001 @@
+10:20:08 (6884) DEBUG ConfigReader Loading config from stryker.conf.json
+10:20:08 (6884) DEBUG ConfigReader Loaded config: {
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "_comment": "This config was generated using 'stryker init'. Please see the guide for more information: https://stryker-mutator.io/docs/stryker-js/guides/react",
+  "testRunner": "jest",
+  "reporters": [
+    "progress",
+    "clear-text",
+    "html"
+  ],
+  "coverageAnalysis": "off",
+  "jest": {
+    "projectType": "create-react-app"
+  },
+  "mutate": [
+    "src/main/**/*.{js,jsx,ts,tsx}",
+    "!src/main/**/*_NoStryker.{js,jsx,ts,tsx}"
+  ],
+  "thresholds": {
+    "high": 100,
+    "low": 90,
+    "break": 100
+  },
+  "fileLogLevel": "trace",
+  "logLevel": "debug",
+  "allowConsoleColors": true,
+  "checkers": [],
+  "checkerNodeArgs": [],
+  "commandRunner": {
+    "command": "npm test"
+  },
+  "clearTextReporter": {
+    "allowColor": true,
+    "allowEmojis": false,
+    "logTests": true,
+    "maxTestsToLog": 3
+  },
+  "dashboard": {
+    "baseUrl": "https://dashboard.stryker-mutator.io/api/reports",
+    "reportType": "full"
+  },
+  "dryRunOnly": false,
+  "eventReporter": {
+    "baseDir": "reports/mutation/events"
+  },
+  "ignorePatterns": [],
+  "ignoreStatic": false,
+  "incremental": false,
+  "incrementalFile": "reports/stryker-incremental.json",
+  "force": false,
+  "inPlace": false,
+  "maxConcurrentTestRunners": 9007199254740991,
+  "maxTestRunnerReuse": 0,
+  "mutator": {
+    "plugins": null,
+    "excludedMutations": []
+  },
+  "plugins": [
+    "@stryker-mutator/*"
+  ],
+  "appendPlugins": [],
+  "htmlReporter": {
+    "fileName": "reports/mutation/mutation.html"
+  },
+  "jsonReporter": {
+    "fileName": "reports/mutation/mutation.json"
+  },
+  "disableTypeChecks": "{test,src,lib}/**/*.{js,ts,jsx,tsx,html,vue}",
+  "symlinkNodeModules": true,
+  "tempDirName": ".stryker-tmp",
+  "cleanTempDir": true,
+  "testRunnerNodeArgs": [],
+  "timeoutFactor": 1.5,
+  "timeoutMS": 5000,
+  "dryRunTimeoutMinutes": 5,
+  "tsconfigFile": "tsconfig.json",
+  "warnings": true,
+  "disableBail": false
+}
+10:20:08 (6884) DEBUG PluginLoader Loading @stryker-mutator/* from /mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/@stryker-mutator
+10:20:08 (6884) DEBUG PluginLoader Loading plugin "@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+10:20:08 (6884) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:20:09 (6884) DEBUG PluginLoader Loading plugin file:///mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:20:10 (6884) DEBUG MetaSchemaBuilder Contributing 1 schemas from plugins to options validation.
+10:20:11 (6884) INFO ProjectReader Found 30 of 176 file(s) to be mutated.
+10:20:11 (6884) DEBUG ProjectReader All input files: [
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.babelrc",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.env-cmdrc.json",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.eslintignore",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.eslintrc.json",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.gitignore",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.storybook/main.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.storybook/preview.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.storybook/webpack-plugin-fail-build-on-warning.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/README.md",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/base.css",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/block-navigation.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/components/Nav/AppNavbar.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/components/Nav/AppNavbarLocalhost.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/components/Nav/Footer.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/components/Nav/index.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/components/OurTable.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/components/Profile/RoleBadge.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/components/Profile/index.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/components/Restaurants/RestaurantForm.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/components/Restaurants/RestaurantTable.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/components/Restaurants/index.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/components/UCSBDates/UCSBDateForm.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/components/UCSBDates/UCSBDatesTable.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/components/UCSBDates/index.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/components/UCSBDiningCommonsMenuItem/UCSBDiningCommonsMenuItemForm.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/components/UCSBDiningCommonsMenuItem/index.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/components/Users/UsersTable.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/components/Users/index.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/components/index.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/favicon.png",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/index.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/layouts/BasicLayout/BasicLayout.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/layouts/BasicLayout/index.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/pages/AdminUsersPage.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/pages/HomePage.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/pages/Placeholder/PlaceholderCreatePage.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/pages/Placeholder/PlaceholderEditPage.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/pages/Placeholder/PlaceholderIndexPage.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/pages/Placeholder/index.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/pages/ProfilePage.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/pages/Restaurants/RestaurantCreatePage.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/pages/Restaurants/RestaurantEditPage.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/pages/Restaurants/RestaurantIndexPage.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/pages/Restaurants/index.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/pages/UCSBDates/UCSBDatesCreatePage.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/pages/UCSBDates/UCSBDatesEditPage.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/pages/UCSBDates/UCSBDatesIndexPage.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/pages/UCSBDates/index.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/pages/index.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/prettify.css",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/prettify.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/sort-arrow-sprite.png",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/sorter.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/utils/UCSBDateUtils.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/utils/arrayUtils.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/utils/currentUser.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/utils/index.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/utils/minMax_NoStryker.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/utils/restaurantUtils.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/utils/systemInfo.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov-report/utils/useBackend.js.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/coverage/lcov.info",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/docs-index/_branches/.keep",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/docs-index/_config.yml",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/docs-index/_layouts/default.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/docs-index/index.md",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/docs-index/storybook_placeholder.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/docs-qa-index/_branches/.keep",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/docs-qa-index/_config.yml",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/docs-qa-index/_layouts/default.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/docs-qa-index/index.md",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/jsconfig.json",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/package-lock.json",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/package.json",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/public/favicon.ico",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/public/index.html",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/public/logo192.png",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/public/logo512.png",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/public/manifest.json",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/public/mockServiceWorker.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/public/robots.txt",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/App.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/fixtures/currentUserFixtures.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/fixtures/restaurantFixtures.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/fixtures/studentFixtures.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/fixtures/systemInfoFixtures.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/fixtures/temp.json",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/fixtures/ucsbDatesFixtures.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/fixtures/ucsbDiningCommonsMenuItemFixtures.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/fixtures/usersFixtures.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/index.css",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/index.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/Nav/AppNavbar.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/Nav/AppNavbarLocalhost.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/Nav/Footer.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/OurTable.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/Profile/RoleBadge.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/Restaurants/RestaurantForm.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/Restaurants/RestaurantTable.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/UCSBDates/UCSBDateForm.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/UCSBDates/UCSBDatesTable.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/UCSBDiningCommonsMenuItem/UCSBDiningCommonsMenuItemForm.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/Users/UsersTable.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/layouts/BasicLayout/BasicLayout.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/AdminUsersPage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/HomePage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/Placeholder/PlaceholderCreatePage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/Placeholder/PlaceholderEditPage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/Placeholder/PlaceholderIndexPage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/ProfilePage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/Restaurants/RestaurantCreatePage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/Restaurants/RestaurantEditPage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/Restaurants/RestaurantIndexPage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/UCSBDates/UCSBDatesCreatePage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/UCSBDates/UCSBDatesEditPage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/UCSBDates/UCSBDatesIndexPage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/utils/UCSBDateUtils.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/utils/arrayUtils.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/utils/currentUser.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/utils/minMax_NoStryker.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/utils/restaurantUtils.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/utils/systemInfo.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/utils/useBackend.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/reportWebVitals.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/setupTests.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/components/Nav/AppNavbar.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/components/Nav/AppNavbarLocalhost.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/components/OurTable.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/components/Profile/RoleBadge.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/components/Restaurants/RestaurantForm.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/components/Restaurants/RestaurantTable.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/components/UCSBDates/UCSBDateForm.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/components/UCSBDates/UCSBDatesTable.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/components/UCSBDiningCommonsMenuItem/UCSBDiningCommonsMenuItemForm.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/components/Users/UsersTable.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/layouts/BasicLayout/AppNavbar.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/layouts/BasicLayout/BasicLayout.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/layouts/BasicLayout/Footer.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/pages/HomePage/HomePage.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/pages/Restaurants/RestaurantCreatePage.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/pages/Restaurants/RestaurantEditPage.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/pages/Restaurants/RestaurantIndexPage.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/pages/UCSBDates/UCSBDatesCreatePage.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/pages/UCSBDates/UCSBDatesEditPage.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/stories/pages/UCSBDates/UCSBDatesIndexPage.stories.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/components/Nav/AppNavbar.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/components/Nav/AppNavbarLocalhost.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/components/Nav/Footer.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/components/OurTable.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/components/Profile/RoleBadge.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/components/Restaurants/RestaurantForm.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/components/Restaurants/RestaurantTable.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/components/UCSBDates/UCSBDateForm.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/components/UCSBDates/UCSBDatesTable.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/components/UCSBDiningCommonsMenuItem/UCSBDiningCommonsMenuItemForm.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/components/Users/UsersTable.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/pages/AdminUsersPage.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/pages/HomePage.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/pages/Placeholder/PlaceholderCreatePage.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/pages/Placeholder/PlaceholderEditPage.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/pages/Placeholder/PlaceholderIndexPage.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/pages/ProfilePage.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/pages/Restaurants/RestaurantCreatePage.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/pages/Restaurants/RestaurantEditPage.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/pages/Restaurants/RestaurantIndexPage.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/pages/Restaurants/foo.json",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/pages/UCSBDates/UCSBDatesCreatePage.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/pages/UCSBDates/UCSBDatesEditPage.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/pages/UCSBDates/UCSBDatesIndexPage.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/utils/UCSBDateUtils.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/utils/arrayUtils.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/utils/currentUser.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/utils/minMax_NoStryker.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/utils/systemInfo.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/tests/utils/useBackend.test.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/stryker.conf.json"
+]
+10:20:11 (6884) DEBUG ProjectReader Files to mutate: [
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/Nav/AppNavbar.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/Nav/AppNavbarLocalhost.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/Nav/Footer.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/OurTable.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/Profile/RoleBadge.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/Restaurants/RestaurantForm.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/Restaurants/RestaurantTable.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/UCSBDates/UCSBDateForm.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/UCSBDates/UCSBDatesTable.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/UCSBDiningCommonsMenuItem/UCSBDiningCommonsMenuItemForm.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/components/Users/UsersTable.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/layouts/BasicLayout/BasicLayout.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/AdminUsersPage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/HomePage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/Placeholder/PlaceholderCreatePage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/Placeholder/PlaceholderEditPage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/Placeholder/PlaceholderIndexPage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/ProfilePage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/Restaurants/RestaurantCreatePage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/Restaurants/RestaurantEditPage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/Restaurants/RestaurantIndexPage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/UCSBDates/UCSBDatesCreatePage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/UCSBDates/UCSBDatesEditPage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/pages/UCSBDates/UCSBDatesIndexPage.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/utils/UCSBDateUtils.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/utils/arrayUtils.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/utils/currentUser.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/utils/restaurantUtils.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/utils/systemInfo.js",
+  "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/src/main/utils/useBackend.js"
+]
+10:20:11 (6884) DEBUG TemporaryDirectory Using temp directory "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp"
+10:20:11 (6884) DEBUG Instrumenter Instrumenting 30 source files with mutants
+10:20:12 (6884) DEBUG Instrumenter Instrumented src/main/components/Nav/AppNavbar.js (35 mutant(s))
+10:20:12 (6884) DEBUG Instrumenter Instrumented src/main/components/Nav/AppNavbarLocalhost.js (1 mutant(s))
+10:20:12 (6884) DEBUG Instrumenter Instrumented src/main/components/Nav/Footer.js (1 mutant(s))
+10:20:13 (6884) DEBUG Instrumenter Instrumented src/main/components/OurTable.js (20 mutant(s))
+10:20:13 (6884) DEBUG Instrumenter Instrumented src/main/components/Profile/RoleBadge.js (7 mutant(s))
+10:20:13 (6884) DEBUG Instrumenter Instrumented src/main/components/Restaurants/RestaurantForm.js (28 mutant(s))
+10:20:13 (6884) DEBUG Instrumenter Instrumented src/main/components/Restaurants/RestaurantTable.js (26 mutant(s))
+10:20:13 (6884) DEBUG Instrumenter Instrumented src/main/components/UCSBDates/UCSBDateForm.js (77 mutant(s))
+10:20:14 (6884) DEBUG Instrumenter Instrumented src/main/components/UCSBDates/UCSBDatesTable.js (31 mutant(s))
+10:20:14 (6884) DEBUG Instrumenter Instrumented src/main/components/UCSBDiningCommonsMenuItem/UCSBDiningCommonsMenuItemForm.js (33 mutant(s))
+10:20:14 (6884) DEBUG Instrumenter Instrumented src/main/components/Users/UsersTable.js (19 mutant(s))
+10:20:14 (6884) DEBUG Instrumenter Instrumented src/main/layouts/BasicLayout/BasicLayout.js (1 mutant(s))
+10:20:14 (6884) DEBUG Instrumenter Instrumented src/main/pages/AdminUsersPage.js (7 mutant(s))
+10:20:14 (6884) DEBUG Instrumenter Instrumented src/main/pages/HomePage.js (1 mutant(s))
+10:20:14 (6884) DEBUG Instrumenter Instrumented src/main/pages/Placeholder/PlaceholderCreatePage.js (1 mutant(s))
+10:20:15 (6884) DEBUG Instrumenter Instrumented src/main/pages/Placeholder/PlaceholderEditPage.js (1 mutant(s))
+10:20:15 (6884) DEBUG Instrumenter Instrumented src/main/pages/Placeholder/PlaceholderIndexPage.js (1 mutant(s))
+10:20:15 (6884) DEBUG Instrumenter Instrumented src/main/pages/ProfilePage.js (8 mutant(s))
+10:20:15 (6884) DEBUG Instrumenter Instrumented src/main/pages/Restaurants/RestaurantCreatePage.js (18 mutant(s))
+10:20:15 (6884) DEBUG Instrumenter Instrumented src/main/pages/Restaurants/RestaurantEditPage.js (29 mutant(s))
+10:20:15 (6884) DEBUG Instrumenter Instrumented src/main/pages/Restaurants/RestaurantIndexPage.js (14 mutant(s))
+10:20:16 (6884) DEBUG Instrumenter Instrumented src/main/pages/UCSBDates/UCSBDatesCreatePage.js (18 mutant(s))
+10:20:16 (6884) DEBUG Instrumenter Instrumented src/main/pages/UCSBDates/UCSBDatesEditPage.js (28 mutant(s))
+10:20:16 (6884) DEBUG Instrumenter Instrumented src/main/pages/UCSBDates/UCSBDatesIndexPage.js (14 mutant(s))
+10:20:16 (6884) DEBUG Instrumenter Instrumented src/main/utils/UCSBDateUtils.js (6 mutant(s))
+10:20:16 (6884) DEBUG Instrumenter Instrumented src/main/utils/arrayUtils.js (2 mutant(s))
+10:20:16 (6884) DEBUG Instrumenter Instrumented src/main/utils/currentUser.js (49 mutant(s))
+10:20:16 (6884) DEBUG Instrumenter Instrumented src/main/utils/restaurantUtils.js (6 mutant(s))
+10:20:16 (6884) DEBUG Instrumenter Instrumented src/main/utils/systemInfo.js (15 mutant(s))
+10:20:16 (6884) DEBUG Instrumenter Instrumented src/main/utils/useBackend.js (22 mutant(s))
+10:20:16 (6884) INFO Instrumenter Instrumented 30 source file(s) with 519 mutant(s)
+10:20:17 (6884) INFO ConcurrencyTokenProvider Creating 7 test runner process(es).
+10:20:17 (6884) DEBUG ChildProcessProxy Started CheckerWorker in worker process 0 with pid 6949 
+10:20:29 (6949) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:20:29 (6949) DEBUG PluginLoader Loading plugin file:///mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:20:32 (6884) DEBUG Sandbox Creating a sandbox for files in /mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550
+10:20:32 (6884) DEBUG Sandbox Start symlink node_modules
+10:20:33 (6884) DEBUG Sandbox Create symlink from /mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules to /mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/node_modules
+10:20:33 (6884) DEBUG BroadcastReporter Broadcasting to reporters ["progress","clear-text","html"]
+10:20:33 (6884) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 0 with pid 6984 
+10:20:33 (6884) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 1 with pid 6990 
+10:20:40 (6990) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:20:40 (6990) DEBUG PluginLoader Loading plugin file:///mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:20:40 (6984) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:20:40 (6984) DEBUG PluginLoader Loading plugin file:///mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:20:41 (6984) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550
+10:20:41 (6990) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550
+10:20:42 (6990) DEBUG jestTestAdapterFactory Detected Jest version 27.5.1
+10:20:42 (6990) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+10:20:42 (6984) DEBUG jestTestAdapterFactory Detected Jest version 27.5.1
+10:20:42 (6984) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+10:20:43 (6990) DEBUG JestTestRunner Merging file-based config {
+  "roots": [
+    "<rootDir>/src"
+  ],
+  "collectCoverageFrom": [
+    "src/main/**/*.{js,jsx,ts,tsx}"
+  ],
+  "setupFiles": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-app-polyfill/jsdom.js"
+  ],
+  "setupFilesAfterEnv": [
+    "<rootDir>/src/setupTests.js"
+  ],
+  "testMatch": [
+    "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+    "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+  ],
+  "testEnvironment": "jsdom",
+  "transform": {
+    "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/babelTransform.js",
+    "^.+\\.css$": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/cssTransform.js",
+    "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/fileTransform.js"
+  },
+  "transformIgnorePatterns": [
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
+    "^.+\\.module\\.(css|sass|scss)$"
+  ],
+  "modulePaths": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src"
+  ],
+  "moduleNameMapper": {
+    "^react-native$": "react-native-web",
+    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+  },
+  "moduleFileExtensions": [
+    "web.js",
+    "js",
+    "web.ts",
+    "ts",
+    "web.tsx",
+    "tsx",
+    "json",
+    "web.jsx",
+    "jsx",
+    "node"
+  ],
+  "watchPlugins": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/node_modules/jest-watch-typeahead/build/file_name_plugin/plugin.js",
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/node_modules/jest-watch-typeahead/build/test_name_plugin/plugin.js"
+  ],
+  "resetMocks": true,
+  "rootDir": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550",
+  "coverageReporters": [
+    "text",
+    "lcov"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 100,
+      "functions": 100,
+      "lines": 100,
+      "statements": 100
+    }
+  }
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+10:20:43 (6884) INFO DryRunExecutor Starting initial test run (jest test runner with "off" coverage analysis). This may take a while.
+10:20:43 (6884) DEBUG DryRunExecutor Using timeout of 300000 ms.
+10:20:43 (6884) DEBUG TimeoutDecorator Starting timeout timer (300000 ms) for a test run
+10:20:43 (6884) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 2 with pid 7033 
+10:20:43 (6990) TRACE JestTestRunner Invoking Jest with config {"fileNamesUnderTest":["/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/components/Nav/AppNavbar.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/components/Nav/AppNavbarLocalhost.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/components/Nav/Footer.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/components/OurTable.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/components/Profile/RoleBadge.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/components/Restaurants/RestaurantForm.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/components/Restaurants/RestaurantTable.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/components/UCSBDates/UCSBDateForm.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/components/UCSBDates/UCSBDatesTable.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/components/UCSBDiningCommonsMenuItem/UCSBDiningCommonsMenuItemForm.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/components/Users/UsersTable.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/layouts/BasicLayout/BasicLayout.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/pages/AdminUsersPage.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/pages/HomePage.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/pages/Placeholder/PlaceholderCreatePage.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/pages/Placeholder/PlaceholderEditPage.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/pages/Placeholder/PlaceholderIndexPage.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/pages/ProfilePage.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/pages/Restaurants/RestaurantCreatePage.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/pages/Restaurants/RestaurantEditPage.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/pages/Restaurants/RestaurantIndexPage.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/pages/UCSBDates/UCSBDatesCreatePage.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/pages/UCSBDates/UCSBDatesEditPage.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/pages/UCSBDates/UCSBDatesIndexPage.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/utils/UCSBDateUtils.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/utils/arrayUtils.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/utils/currentUser.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/utils/restaurantUtils.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/utils/systemInfo.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/utils/useBackend.js"],"jestConfig":{"roots":["<rootDir>/src","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/components/Nav","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/components","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/components/Profile","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/components/Restaurants","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/components/UCSBDates","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/components/UCSBDiningCommonsMenuItem","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/components/Users","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/layouts/BasicLayout","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/pages","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/pages/Placeholder","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/pages/Restaurants","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/pages/UCSBDates","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src/main/utils"],"collectCoverageFrom":["src/main/**/*.{js,jsx,ts,tsx}"],"setupFiles":["/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-app-polyfill/jsdom.js"],"setupFilesAfterEnv":["<rootDir>/src/setupTests.js"],"testMatch":["<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}","<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"],"testEnvironment":"jsdom","transform":{"^.+\\.(js|jsx|mjs|cjs|ts|tsx)$":"/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/babelTransform.js","^.+\\.css$":"/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/cssTransform.js","^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)":"/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/fileTransform.js"},"transformIgnorePatterns":["[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$","^.+\\.module\\.(css|sass|scss)$"],"modulePaths":["/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src"],"moduleNameMapper":{"^react-native$":"react-native-web","^.+\\.module\\.(css|sass|scss)$":"identity-obj-proxy"},"moduleFileExtensions":["web.js","js","web.ts","ts","web.tsx","tsx","json","web.jsx","jsx","node"],"watchPlugins":["/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/node_modules/jest-watch-typeahead/build/file_name_plugin/plugin.js","/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/node_modules/jest-watch-typeahead/build/test_name_plugin/plugin.js"],"resetMocks":true,"rootDir":"/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550","coverageReporters":["text","lcov"],"coverageThreshold":{"global":{"branches":100,"functions":100,"lines":100,"statements":100}},"collectCoverage":false,"verbose":false,"notify":false,"bail":false,"reporters":[],"globals":{"__strykerGlobalNamespace__":"__stryker__"}},"testLocationInResults":true}
+10:20:43 (6984) DEBUG JestTestRunner Merging file-based config {
+  "roots": [
+    "<rootDir>/src"
+  ],
+  "collectCoverageFrom": [
+    "src/main/**/*.{js,jsx,ts,tsx}"
+  ],
+  "setupFiles": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-app-polyfill/jsdom.js"
+  ],
+  "setupFilesAfterEnv": [
+    "<rootDir>/src/setupTests.js"
+  ],
+  "testMatch": [
+    "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+    "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+  ],
+  "testEnvironment": "jsdom",
+  "transform": {
+    "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/babelTransform.js",
+    "^.+\\.css$": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/cssTransform.js",
+    "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/fileTransform.js"
+  },
+  "transformIgnorePatterns": [
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
+    "^.+\\.module\\.(css|sass|scss)$"
+  ],
+  "modulePaths": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src"
+  ],
+  "moduleNameMapper": {
+    "^react-native$": "react-native-web",
+    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+  },
+  "moduleFileExtensions": [
+    "web.js",
+    "js",
+    "web.ts",
+    "ts",
+    "web.tsx",
+    "tsx",
+    "json",
+    "web.jsx",
+    "jsx",
+    "node"
+  ],
+  "watchPlugins": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/node_modules/jest-watch-typeahead/build/file_name_plugin/plugin.js",
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/node_modules/jest-watch-typeahead/build/test_name_plugin/plugin.js"
+  ],
+  "resetMocks": true,
+  "rootDir": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550",
+  "coverageReporters": [
+    "text",
+    "lcov"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 100,
+      "functions": 100,
+      "lines": 100,
+      "statements": 100
+    }
+  }
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+10:20:43 (6884) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 3 with pid 7039 
+10:20:48 (7033) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:20:48 (7039) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:20:48 (7039) DEBUG PluginLoader Loading plugin file:///mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:20:48 (7033) DEBUG PluginLoader Loading plugin file:///mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:20:50 (7033) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550
+10:20:50 (7039) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550
+10:20:51 (7039) DEBUG jestTestAdapterFactory Detected Jest version 27.5.1
+10:20:51 (7033) DEBUG jestTestAdapterFactory Detected Jest version 27.5.1
+10:20:51 (7033) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+10:20:51 (7039) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+10:20:51 (7033) DEBUG JestTestRunner Merging file-based config {
+  "roots": [
+    "<rootDir>/src"
+  ],
+  "collectCoverageFrom": [
+    "src/main/**/*.{js,jsx,ts,tsx}"
+  ],
+  "setupFiles": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-app-polyfill/jsdom.js"
+  ],
+  "setupFilesAfterEnv": [
+    "<rootDir>/src/setupTests.js"
+  ],
+  "testMatch": [
+    "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+    "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+  ],
+  "testEnvironment": "jsdom",
+  "transform": {
+    "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/babelTransform.js",
+    "^.+\\.css$": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/cssTransform.js",
+    "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/fileTransform.js"
+  },
+  "transformIgnorePatterns": [
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
+    "^.+\\.module\\.(css|sass|scss)$"
+  ],
+  "modulePaths": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src"
+  ],
+  "moduleNameMapper": {
+    "^react-native$": "react-native-web",
+    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+  },
+  "moduleFileExtensions": [
+    "web.js",
+    "js",
+    "web.ts",
+    "ts",
+    "web.tsx",
+    "tsx",
+    "json",
+    "web.jsx",
+    "jsx",
+    "node"
+  ],
+  "watchPlugins": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/node_modules/jest-watch-typeahead/build/file_name_plugin/plugin.js",
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/node_modules/jest-watch-typeahead/build/test_name_plugin/plugin.js"
+  ],
+  "resetMocks": true,
+  "rootDir": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550",
+  "coverageReporters": [
+    "text",
+    "lcov"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 100,
+      "functions": 100,
+      "lines": 100,
+      "statements": 100
+    }
+  }
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+10:20:51 (6884) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 4 with pid 7084 
+10:20:51 (7039) DEBUG JestTestRunner Merging file-based config {
+  "roots": [
+    "<rootDir>/src"
+  ],
+  "collectCoverageFrom": [
+    "src/main/**/*.{js,jsx,ts,tsx}"
+  ],
+  "setupFiles": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-app-polyfill/jsdom.js"
+  ],
+  "setupFilesAfterEnv": [
+    "<rootDir>/src/setupTests.js"
+  ],
+  "testMatch": [
+    "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+    "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+  ],
+  "testEnvironment": "jsdom",
+  "transform": {
+    "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/babelTransform.js",
+    "^.+\\.css$": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/cssTransform.js",
+    "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/fileTransform.js"
+  },
+  "transformIgnorePatterns": [
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
+    "^.+\\.module\\.(css|sass|scss)$"
+  ],
+  "modulePaths": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src"
+  ],
+  "moduleNameMapper": {
+    "^react-native$": "react-native-web",
+    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+  },
+  "moduleFileExtensions": [
+    "web.js",
+    "js",
+    "web.ts",
+    "ts",
+    "web.tsx",
+    "tsx",
+    "json",
+    "web.jsx",
+    "jsx",
+    "node"
+  ],
+  "watchPlugins": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/node_modules/jest-watch-typeahead/build/file_name_plugin/plugin.js",
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/node_modules/jest-watch-typeahead/build/test_name_plugin/plugin.js"
+  ],
+  "resetMocks": true,
+  "rootDir": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550",
+  "coverageReporters": [
+    "text",
+    "lcov"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 100,
+      "functions": 100,
+      "lines": 100,
+      "statements": 100
+    }
+  }
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+10:20:51 (6884) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 5 with pid 7085 
+10:20:57 (7085) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:20:57 (7085) DEBUG PluginLoader Loading plugin file:///mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:20:57 (7084) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:20:57 (7084) DEBUG PluginLoader Loading plugin file:///mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:20:59 (7084) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550
+10:20:59 (7085) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550
+10:21:01 (7084) DEBUG jestTestAdapterFactory Detected Jest version 27.5.1
+10:21:01 (7084) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+10:21:01 (7085) DEBUG jestTestAdapterFactory Detected Jest version 27.5.1
+10:21:01 (7085) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+10:21:01 (7084) DEBUG JestTestRunner Merging file-based config {
+  "roots": [
+    "<rootDir>/src"
+  ],
+  "collectCoverageFrom": [
+    "src/main/**/*.{js,jsx,ts,tsx}"
+  ],
+  "setupFiles": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-app-polyfill/jsdom.js"
+  ],
+  "setupFilesAfterEnv": [
+    "<rootDir>/src/setupTests.js"
+  ],
+  "testMatch": [
+    "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+    "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+  ],
+  "testEnvironment": "jsdom",
+  "transform": {
+    "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/babelTransform.js",
+    "^.+\\.css$": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/cssTransform.js",
+    "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/fileTransform.js"
+  },
+  "transformIgnorePatterns": [
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
+    "^.+\\.module\\.(css|sass|scss)$"
+  ],
+  "modulePaths": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src"
+  ],
+  "moduleNameMapper": {
+    "^react-native$": "react-native-web",
+    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+  },
+  "moduleFileExtensions": [
+    "web.js",
+    "js",
+    "web.ts",
+    "ts",
+    "web.tsx",
+    "tsx",
+    "json",
+    "web.jsx",
+    "jsx",
+    "node"
+  ],
+  "watchPlugins": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/node_modules/jest-watch-typeahead/build/file_name_plugin/plugin.js",
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/node_modules/jest-watch-typeahead/build/test_name_plugin/plugin.js"
+  ],
+  "resetMocks": true,
+  "rootDir": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550",
+  "coverageReporters": [
+    "text",
+    "lcov"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 100,
+      "functions": 100,
+      "lines": 100,
+      "statements": 100
+    }
+  }
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+10:21:01 (6884) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 6 with pid 7130 
+10:21:02 (7085) DEBUG JestTestRunner Merging file-based config {
+  "roots": [
+    "<rootDir>/src"
+  ],
+  "collectCoverageFrom": [
+    "src/main/**/*.{js,jsx,ts,tsx}"
+  ],
+  "setupFiles": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-app-polyfill/jsdom.js"
+  ],
+  "setupFilesAfterEnv": [
+    "<rootDir>/src/setupTests.js"
+  ],
+  "testMatch": [
+    "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+    "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+  ],
+  "testEnvironment": "jsdom",
+  "transform": {
+    "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/babelTransform.js",
+    "^.+\\.css$": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/cssTransform.js",
+    "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/fileTransform.js"
+  },
+  "transformIgnorePatterns": [
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
+    "^.+\\.module\\.(css|sass|scss)$"
+  ],
+  "modulePaths": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src"
+  ],
+  "moduleNameMapper": {
+    "^react-native$": "react-native-web",
+    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+  },
+  "moduleFileExtensions": [
+    "web.js",
+    "js",
+    "web.ts",
+    "ts",
+    "web.tsx",
+    "tsx",
+    "json",
+    "web.jsx",
+    "jsx",
+    "node"
+  ],
+  "watchPlugins": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/node_modules/jest-watch-typeahead/build/file_name_plugin/plugin.js",
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/node_modules/jest-watch-typeahead/build/test_name_plugin/plugin.js"
+  ],
+  "resetMocks": true,
+  "rootDir": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550",
+  "coverageReporters": [
+    "text",
+    "lcov"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 100,
+      "functions": 100,
+      "lines": 100,
+      "statements": 100
+    }
+  }
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+10:21:14 (7130) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:21:14 (7130) DEBUG PluginLoader Loading plugin file:///mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:21:18 (7130) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550
+10:21:20 (7130) DEBUG jestTestAdapterFactory Detected Jest version 27.5.1
+10:21:20 (7130) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+10:21:21 (7130) DEBUG JestTestRunner Merging file-based config {
+  "roots": [
+    "<rootDir>/src"
+  ],
+  "collectCoverageFrom": [
+    "src/main/**/*.{js,jsx,ts,tsx}"
+  ],
+  "setupFiles": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-app-polyfill/jsdom.js"
+  ],
+  "setupFilesAfterEnv": [
+    "<rootDir>/src/setupTests.js"
+  ],
+  "testMatch": [
+    "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+    "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+  ],
+  "testEnvironment": "jsdom",
+  "transform": {
+    "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/babelTransform.js",
+    "^.+\\.css$": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/cssTransform.js",
+    "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/fileTransform.js"
+  },
+  "transformIgnorePatterns": [
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
+    "^.+\\.module\\.(css|sass|scss)$"
+  ],
+  "modulePaths": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src"
+  ],
+  "moduleNameMapper": {
+    "^react-native$": "react-native-web",
+    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+  },
+  "moduleFileExtensions": [
+    "web.js",
+    "js",
+    "web.ts",
+    "ts",
+    "web.tsx",
+    "tsx",
+    "json",
+    "web.jsx",
+    "jsx",
+    "node"
+  ],
+  "watchPlugins": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/node_modules/jest-watch-typeahead/build/file_name_plugin/plugin.js",
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/node_modules/jest-watch-typeahead/build/test_name_plugin/plugin.js"
+  ],
+  "resetMocks": true,
+  "rootDir": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550",
+  "coverageReporters": [
+    "text",
+    "lcov"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 100,
+      "functions": 100,
+      "lines": 100,
+      "statements": 100
+    }
+  }
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+10:25:43 (6884) DEBUG TimeoutDecorator Timeout expired, restarting the process and reporting timeout
+10:25:45 (6884) DEBUG ChildProcessProxy Disposing of worker process 6990
+10:25:47 (6884) DEBUG ChildProcessProxy Kill 6990
+10:25:47 (6884) DEBUG ChildProcessProxy Started ChildProcessTestRunnerWorker in worker process 7 with pid 7239 
+10:25:59 (7239) DEBUG PluginLoader Loading plugin @stryker-mutator/jest-runner
+10:25:59 (7239) DEBUG PluginLoader Loading plugin file:///mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/@stryker-mutator/core/dist/src/reporters/index.js
+10:26:02 (7239) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550
+10:26:05 (7239) DEBUG jestTestAdapterFactory Detected Jest version 27.5.1
+10:26:05 (7239) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+10:26:06 (7239) DEBUG JestTestRunner Merging file-based config {
+  "roots": [
+    "<rootDir>/src"
+  ],
+  "collectCoverageFrom": [
+    "src/main/**/*.{js,jsx,ts,tsx}"
+  ],
+  "setupFiles": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-app-polyfill/jsdom.js"
+  ],
+  "setupFilesAfterEnv": [
+    "<rootDir>/src/setupTests.js"
+  ],
+  "testMatch": [
+    "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+    "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+  ],
+  "testEnvironment": "jsdom",
+  "transform": {
+    "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/babelTransform.js",
+    "^.+\\.css$": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/cssTransform.js",
+    "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/config/jest/fileTransform.js"
+  },
+  "transformIgnorePatterns": [
+    "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
+    "^.+\\.module\\.(css|sass|scss)$"
+  ],
+  "modulePaths": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550/src"
+  ],
+  "moduleNameMapper": {
+    "^react-native$": "react-native-web",
+    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+  },
+  "moduleFileExtensions": [
+    "web.js",
+    "js",
+    "web.ts",
+    "ts",
+    "web.tsx",
+    "tsx",
+    "json",
+    "web.jsx",
+    "jsx",
+    "node"
+  ],
+  "watchPlugins": [
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/node_modules/jest-watch-typeahead/build/file_name_plugin/plugin.js",
+    "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/react-scripts/node_modules/jest-watch-typeahead/build/test_name_plugin/plugin.js"
+  ],
+  "resetMocks": true,
+  "rootDir": "/mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/.stryker-tmp/sandbox8997550",
+  "coverageReporters": [
+    "text",
+    "lcov"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 100,
+      "functions": 100,
+      "lines": 100,
+      "statements": 100
+    }
+  }
+}
+      with custom config {}
+      and default (internal) stryker config {
+  "collectCoverage": false,
+  "verbose": false,
+  "notify": false,
+  "bail": false,
+  "reporters": []
+}
+10:26:06 (6884) ERROR DryRunExecutor Initial test run timed out!
+10:26:06 (6884) DEBUG Stryker Not removing the temp dir because an error occurred
+10:26:06 (6884) ERROR Stryker Unexpected error occurred while running Stryker Error: Something went wrong in the initial test run
+    at DryRunExecutor.validateResultCompleted (file:///mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/@stryker-mutator/core/dist/src/process/3-dry-run-executor.js:67:15)
+    at DryRunExecutor.executeDryRun (file:///mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/@stryker-mutator/core/dist/src/process/3-dry-run-executor.js:87:14)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async WorkItem.execute (file:///mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/@stryker-mutator/core/dist/src/concurrent/pool.js:30:28)
+    at async file:///mnt/c/Users/sawye/cs156/team03-s24-4pm-6/frontend/node_modules/@stryker-mutator/core/dist/src/concurrent/pool.js:67:13
+10:26:06 (6884) INFO Stryker This might be a known problem with a solution documented in our troubleshooting guide.
+10:26:06 (6884) INFO Stryker You can find it at https://stryker-mutator.io/docs/stryker-js/troubleshooting/
+10:26:06 (6884) DEBUG ChildProcessProxy Disposing of worker process 7033
+10:26:06 (6884) DEBUG ChildProcessProxy Disposing of worker process 6984
+10:26:06 (6884) DEBUG ChildProcessProxy Disposing of worker process 7039
+10:26:06 (6884) DEBUG ChildProcessProxy Disposing of worker process 7084
+10:26:06 (6884) DEBUG ChildProcessProxy Disposing of worker process 7085
+10:26:06 (6884) DEBUG ChildProcessProxy Disposing of worker process 7130
+10:26:06 (6884) DEBUG ChildProcessProxy Disposing of worker process 7239
+10:26:06 (6884) DEBUG ChildProcessProxy Kill 7033
+10:26:06 (6884) DEBUG ChildProcessProxy Kill 7239
+10:26:06 (6884) DEBUG ChildProcessProxy Kill 7084
+10:26:06 (6884) DEBUG ChildProcessProxy Kill 7039
+10:26:06 (6884) DEBUG ChildProcessProxy Kill 7130
+10:26:06 (6884) DEBUG ChildProcessProxy Kill 6984
+10:26:06 (6884) DEBUG ChildProcessProxy Kill 7085
+10:26:06 (6884) DEBUG ChildProcessProxy Disposing of worker process 6949
+10:26:06 (6884) DEBUG ChildProcessProxy Kill 6949
