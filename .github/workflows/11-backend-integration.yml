@@ -32,5 +32,5 @@ jobs:
     - name: Run IT tests with maven
       env:
         TEST_PROPERTIES: ${{ secrets.TEST_PROPERTIES }}
-      run: INTEGRATION=true mvn -B failsafe:integration-test 
+      run: INTEGRATION=true mvn -B failsafe:integration-test failsafe:verify
       
