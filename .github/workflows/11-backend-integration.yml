@@ -24,13 +24,6 @@ jobs:
          distribution: semeru # See: https://github.com/actions/setup-java#supported-distributions
          java-version-file: ./.java-version
   
-    - name: Test compile with Maven
-      env:
-        TEST_PROPERTIES: ${{ secrets.TEST_PROPERTIES }}
-      run: INTEGRATION=true mvn -B test-compile
-      
     - name: Run IT tests with maven
-      env:
-        TEST_PROPERTIES: ${{ secrets.TEST_PROPERTIES }}
-      run: INTEGRATION=true mvn -B failsafe:integration-test failsafe:verify
+      run: INTEGRATION=true mvn -B test-compile failsafe:integration-test failsafe:verify
       
