@@ -34,10 +34,10 @@ public class RestaurantWebIT extends WebTestCase {
 
         page.getByTestId("RestaurantTable-cell-row-0-col-Edit-button").click();
         assertThat(page.getByText("Edit Restaurant")).isVisible();
-        page.getByTestId("RestaurantForm-description").fill("THE BEST");
+        page.getByTestId("RestaurantForm-description").fill("THE BESTEST");
         page.getByTestId("RestaurantForm-submit").click();
 
-        assertThat(page.getByTestId("RestaurantTable-cell-row-0-col-description")).hasText("THE BEST");
+        assertThat(page.getByTestId("RestaurantTable-cell-row-0-col-description")).hasText("THE BESTEST");
 
         page.getByTestId("RestaurantTable-cell-row-0-col-Delete-button").click();
 
