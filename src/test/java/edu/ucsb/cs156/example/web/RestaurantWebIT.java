@@ -37,7 +37,7 @@ public class RestaurantWebIT extends WebTestCase {
         page.getByTestId("RestaurantForm-description").fill("THE BEST");
         page.getByTestId("RestaurantForm-submit").click();
 
-        assertThat(page.getByTestId("RestaurantTable-cell-row-0-col-description")).hasText("THE BESTEST");
+        assertThat(page.getByTestId("RestaurantTable-cell-row-0-col-description")).hasText("THE BEST");
 
         page.getByTestId("RestaurantTable-cell-row-0-col-Delete-button").click();
 
