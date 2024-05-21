@@ -21,7 +21,7 @@ function RestaurantForm({ initialContents, submitAction, buttonLabel = "Create" 
 
     return (
         <Form onSubmit={handleSubmit(submitAction)}>
-
+            
             {initialContents && (
                 <Form.Group className="mb-3" >
                     <Form.Label htmlFor="id">Id</Form.Label>
